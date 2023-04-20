@@ -12,6 +12,7 @@ private:
 public:
     void withdraw(float toWithdraw);
     void deposit(float toDeposit);
+    
     void def_OwnerName(std::string name);
     void def_accountID(std::string id);
     void def_OwnerCPF(std::string cpf);
