@@ -2,6 +2,14 @@
 #include<iostream>
 #include<string>
 
+Account::Account(std::string account_id, std::string ownerCPF, std::string ownerNAME)
+{
+    this->ownerNAME = ownerNAME;
+    this->account_id = account_id;
+    this->ownerCPF = ownerCPF;
+    this->balance = 0;
+}
+
 void Account::withdraw(float toWithdraw)
 {
     if(toWithdraw < 0)
@@ -24,21 +32,6 @@ void Account::deposit(float toDeposit)
         }
 
     balance += toDeposit;
-}
-
-void Account::def_OwnerName(std:: string name)
-{
-    ownerNAME = name;
-}
-
-void Account::def_accountID(std::string id)
-{
-    account_id = id;
-}
-
-void Account::def_OwnerCPF(std:: string cpf)
-{
-    ownerCPF = cpf;
 }
 
 std::string Account::get_OwnerNAME()
