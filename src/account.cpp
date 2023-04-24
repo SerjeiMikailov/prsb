@@ -2,6 +2,8 @@
 #include<iostream>
 #include<string>
 
+// ac always = account
+
 Account::Account(std::string account_id, std::string ownerCPF, std::string ownerNAME)
 {
     this->ownerNAME = ownerNAME;
@@ -52,4 +54,28 @@ std::string Account::get_AccountID()
 float Account::getBalance()
 {
     return balance;
+}
+
+void show_balance(Account& ac)
+{
+    std::cout << "Balance: ";
+    std::cout << ac.getBalance() << std::endl;
+}
+
+void show_OwnerCPF(Account& ac)
+{
+    std::cout << "CPF: ";
+    std::cout << ac.get_OwnerCPF() << std::endl;
+}
+
+void show_OwnerNAME(Account& ac)
+{
+    std::cout << "Name: ";
+    std::cout << ac.get_OwnerNAME() << std::endl;
+}
+
+void show_OwnerID(Account& ac)
+{
+    std::cout << "OwnerID: ";
+    std::cout << ac.get_AccountID() << std::endl;
 }
