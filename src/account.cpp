@@ -2,14 +2,17 @@
 #include<iostream>
 #include<string>
 
-// ac always = account
+// ac = account
+
+static int totalAccounts = 0; // the number of accounts in the system
 
 Account::Account(std::string account_id, std::string ownerCPF, std::string ownerNAME)
+    :account_id(account_id),
+     ownerCPF(ownerCPF),
+     ownerNAME(ownerNAME),
+     balance(0)
 {
-    this->ownerNAME = ownerNAME;
-    this->account_id = account_id;
-    this->ownerCPF = ownerCPF;
-    this->balance = 0;
+    totalAccounts++;
 }
 
 void Account::withdraw(float toWithdraw)
