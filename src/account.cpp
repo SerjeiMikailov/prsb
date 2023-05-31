@@ -4,15 +4,11 @@
 
 // ac = account
 
-static int totalAccounts = 0; // the number of accounts in the system
-
-Account::Account(std::string account_id, std::string ownerCPF, std::string ownerNAME)
+Account::Account(std::string account_id, Owner owner)
     :account_id(account_id),
-     ownerCPF(ownerCPF),
-     ownerNAME(ownerNAME),
+     owner(owner),
      balance(0)
 {
-    totalAccounts++;
 }
 
 void Account::withdraw(float toWithdraw)
@@ -39,21 +35,6 @@ void Account::deposit(float toDeposit)
     balance += toDeposit;
 }
 
-std::string Account::get_OwnerNAME()
-{
-    return ownerNAME;
-}
-
-std::string Account::get_OwnerCPF()
-{
-    return ownerCPF;
-}
-
-std::string Account::get_AccountID()
-{
-    return account_id;
-}
-
 float Account::getBalance()
 {
     return balance;
@@ -63,22 +44,4 @@ void show_balance(Account& ac)
 {
     std::cout << "Balance: ";
     std::cout << ac.getBalance() << std::endl;
-}
-
-void show_OwnerCPF(Account& ac)
-{
-    std::cout << "CPF: ";
-    std::cout << ac.get_OwnerCPF() << std::endl;
-}
-
-void show_OwnerNAME(Account& ac)
-{
-    std::cout << "Name: ";
-    std::cout << ac.get_OwnerNAME() << std::endl;
-}
-
-void show_OwnerID(Account& ac)
-{
-    std::cout << "OwnerID: ";
-    std::cout << ac.get_AccountID() << std::endl;
 }

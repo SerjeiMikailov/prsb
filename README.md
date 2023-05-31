@@ -1,1 +1,1 @@
-### C++ pratice
+### C++ simple account system

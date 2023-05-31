@@ -1,31 +1,27 @@
 #pragma once
 #include<string>
+#include "Owner.hpp"
 
 class Account
 {
 private:
     std::string account_id;
-    std::string ownerCPF;
-    std::string ownerNAME;
+    Owner owner;
     float balance;
 
-    static int totalAccounts;
-
 public:
-Account(std::string account_id, std::string ownerCPF, std::string ownerNAME);
+    Account(std::string account_id, Owner owner);
+    ~Account();
 
     void withdraw(float toWithdraw);
     void deposit(float toDeposit);
     
     std::string get_OwnerCPF();
-    std::string get_AccountID();
-    std::string get_OwnerNAME();
     float getBalance();
 
+    void get_AccountID(Account& ac);
     void show_balance(Account& ac);
-    void show_OwnerCPF(Account& ac);
-    void show_OwnerNAME(Account& ac);
     void show_OwnerID(Account& ac);
 
-    static int get_totalAccounts;
+    static int get_totalAccounts();
 };
