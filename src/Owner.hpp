@@ -1,16 +1,10 @@
 #pragma once
 #include <string>
+#include "person.hpp"
 #include "cpf.hpp"
 
-class Owner
+class Owner : public Person
 {   
-    private:
-        std::string name;
-        CPF cpf;
-        void verNameLenght();
     public:
         Owner(CPF cpf, std::string name);
-
-        static int totalAccounts;
-        static int get_totalAccounts();
 };

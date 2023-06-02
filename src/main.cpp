@@ -9,9 +9,9 @@ using namespace std;
 
 int main()
 {
-    Owner owner(string("123.456.789-10"), "Cleitin");
+    Person Person(string("123.456.789-10"), "Cleitin");
 
-    cout << "Accounts in the system: " << Owner::get_totalAccounts() << endl;
+    cout << "Persons in the system: " << Person::get_totalAccounts() << endl;
 
     return 0;
 }
