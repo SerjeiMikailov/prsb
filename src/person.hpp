@@ -4,7 +4,7 @@
 
 class Person
 {
-    private:
+    protected:
         std::string name;
         CPF cpf;
         void verNameLenght();
@@ -12,4 +12,5 @@ class Person
     public:
         Person(CPF cpf, std::string name);
         static int get_totalAccounts();
+        std::string get_name();
 };
