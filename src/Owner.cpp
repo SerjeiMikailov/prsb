@@ -1,9 +1,10 @@
 #include<iostream>
 #include "Owner.hpp"
+#include "cpf.hpp"
 
 int Owner::totalAccounts = 0; // the number of accounts in the system
 
-Owner::Owner(std::string cpf, std::string name):cpf(cpf),name(name)
+Owner::Owner(CPF cpf, std::string name):cpf(cpf),name(name)
 {
     verNameLenght();
     totalAccounts++;
