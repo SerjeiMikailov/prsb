@@ -5,9 +5,10 @@
 
 // ac = account
 
-Account::Account(std::string account_id, Person person)
+Account::Account(std::string account_id, Person person, short int account_Type)
     :account_id(account_id),
      person(person),
+     account_Type(account_Type),
      balance(0)
 {
 }
@@ -16,8 +17,9 @@ Account::~Account()
 }
 
 void Account::withdraw(float toWithdraw)
-{
-    float withdraw_tax = toWithdraw * 0.05;
+{   
+    float tax = account_Type == 1 ? 0.05 : 0.03;
+    float withdraw_tax = toWithdraw * tax;
     float withdraw_value = toWithdraw - withdraw_tax;
 
     if(toWithdraw < 0)
@@ -29,7 +31,7 @@ void Account::withdraw(float toWithdraw)
             std::cout << "Insufficient balance" << std::endl;
         }
         balance -= withdraw_value;
-        std::cout << "Withdraw: " << toWithdraw << std::endl;
+        std::cout << "Wants to Withdraw: " << toWithdraw << std::endl;
         std::cout << "Withdraw Tax: " << withdraw_tax << std::endl;
         std::cout << "Withdraw Total: " << withdraw_value << std::endl;
 }

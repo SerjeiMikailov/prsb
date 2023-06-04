@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
     Person person1(CPF("123.456.789-10"), "Cleitin");
-    Account cleitin("34324", person1);
+    Account cleitin("34324", person1, 1);
 
     cout << "Person: " << person1.get_name() << endl;
 
@@ -20,7 +20,7 @@ int main()
     cout << "Money: " << cleitin.getBalance() << endl;
 
     Person person2(CPF("123.456.789-10"), "Pedrin");
-    Account pedrin("34324", person2);
+    Account pedrin("34324", person2, 2);
 
     cout << "Person: " << person2.get_name() << endl;
 
