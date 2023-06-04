@@ -22,6 +22,7 @@ int Person::get_totalAccounts()
         return totalAccounts;
     }
 
+
 std::string Person::get_name()
 {
     return name;

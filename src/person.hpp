@@ -5,7 +5,7 @@
 class Person
 {
     protected:
-        std::string name;
+        std::string name; 
         CPF cpf;
         void verNameLenght();
         int static totalAccounts;
