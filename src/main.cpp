@@ -5,6 +5,7 @@
 #include "cpf.hpp"
 #include "savingsAc.hpp"
 #include "account.hpp"
+#include "CurrentAc.hpp"
 
 using namespace std;
 
@@ -18,7 +19,7 @@ int main()
     cout << "/////////////////////////////////" << endl;
 
     Person person1(CPF("123.456.789-10"), "Cleitin");
-    Account cleitin("34324", person1);
+    CurrentAc cleitin("34324", person1);
 
     cout << "Person: " << person1.get_name() << endl;
 
