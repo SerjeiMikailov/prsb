@@ -1,2 +1,1 @@
-### C++ bank system (main branch currently outdated)
-## See the "pre-build" branch
+### C++ bank system pre-build version (ahead of main branch)
