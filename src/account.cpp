@@ -5,9 +5,9 @@
 
 // ac = account
 
-Account::Account(std::string account_id, Owner Owner)
+Account::Account(std::string account_id, Person person)
     :account_id(account_id),
-     owner(owner),
+     person(person),
      balance(0)
 {
 }
@@ -50,7 +50,7 @@ float Account::getBalance()
     return balance;
 }
 
-void show_balance(Account& ac)
+void Account::show_balance(Account& ac) // outdated
 {
     std::cout << "Balance: ";
     std::cout << ac.getBalance() << std::endl;
