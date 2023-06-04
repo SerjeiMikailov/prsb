@@ -5,17 +5,16 @@
 
 class Account
 {
-private:
+protected:
     std::string account_id;
     Person person;
     float balance;
-    short int account_Type;
 
 public:
-    Account(std::string account_id, Person person, short int account_Type);
+    Account(std::string account_id, Person person);
     ~Account();
 
-    void withdraw(float toWithdraw);
+    virtual void withdraw(float toWithdraw);
     void deposit(float toDeposit);
     
     float getBalance();
