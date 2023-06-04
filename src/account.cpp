@@ -18,7 +18,7 @@ Account::~Account()
 void Account::withdraw(float toWithdraw)
 {
     float withdraw_tax = toWithdraw * 0.05;
-    float withdraw_value = toWithdraw + withdraw_tax;
+    float withdraw_value = toWithdraw - withdraw_tax;
 
     if(toWithdraw < 0)
         {

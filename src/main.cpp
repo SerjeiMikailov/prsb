@@ -19,6 +19,16 @@ int main()
     cleitin.withdraw(200);
     cout << "Money: " << cleitin.getBalance() << endl;
 
+    Person person2(CPF("123.456.789-10"), "Pedrin");
+    Account pedrin("34324", person2);
+
+    cout << "Person: " << person2.get_name() << endl;
+
+    pedrin.deposit(3000);
+    pedrin.withdraw(2600);
+    cout << "Money: " << pedrin.getBalance() << endl;
+
+
     cout << "Persons in the system: " << Person::get_totalAccounts() << endl;
 
     return 0;
