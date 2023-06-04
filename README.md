@@ -1,1 +1,1 @@
-### C++ simple account system
+### C++ bank system pre-build version (ahead of main branch)
