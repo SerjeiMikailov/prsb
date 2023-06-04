@@ -7,11 +7,11 @@ class Account
 {
 private:
     std::string account_id;
-    Owner owner;
+    Person person;
     float balance;
 
 public:
-    Account(std::string account_id, Owner owner);
+    Account(std::string account_id, Person person);
     ~Account();
 
     void withdraw(float toWithdraw);
@@ -20,6 +20,6 @@ public:
     float getBalance();
 
     void get_AccountID(Account& ac);
-    void show_balance(Account& ac);
+    void show_balance(Account& ac); // outdated
     void show_OwnerID(Account& ac);
 };
