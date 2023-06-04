@@ -9,9 +9,10 @@ private:
     std::string account_id;
     Person person;
     float balance;
+    short int account_Type;
 
 public:
-    Account(std::string account_id, Person person);
+    Account(std::string account_id, Person person, short int account_Type);
     ~Account();
 
     void withdraw(float toWithdraw);
