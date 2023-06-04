@@ -2,17 +2,24 @@
 #include <ostream>
 #include <string>
 /////////////////////
-#include "account.hpp"
-#include "Owner.hpp"
 #include "cpf.hpp"
+#include "Owner.hpp"
+#include "account.hpp"
 
 using namespace std;
 
+class Owner;
+class Account;
+
 int main()
 {
-    Person Person(string("123.456.789-10"), "Cleitin");
+    Owner owner(CPF("123.456.789-10"), "Cleitin");
+    Account account("34324", owner);
 
-    cout << "Person: " << Person.get_name() << endl;
+    //cout << "Person: " << Cleitin1.get_name() << endl;
+
+    //cleitin.deposit(400);
+    //cleitin.withdraw(200);
 
     cout << "Persons in the system: " << Person::get_totalAccounts() << endl;
 
