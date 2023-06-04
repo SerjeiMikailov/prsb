@@ -3,9 +3,9 @@
 
 // Savings account
 
-class savingsAc : public Account
+class savingsAc final : public Account
 {
     public:
         savingsAc(std::string number, Person person);
-        void withdraw(float toWithdraw) override;
+        float withdrawTax() const override;
 };

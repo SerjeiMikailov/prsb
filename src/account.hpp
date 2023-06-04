@@ -12,9 +12,10 @@ protected:
 
 public:
     Account(std::string account_id, Person person);
-    ~Account();
+    virtual ~Account();
 
-    virtual void withdraw(float toWithdraw);
+    virtual float withdrawTax() const = 0;
+    void withdraw(float toWithdraw);
     void deposit(float toDeposit);
     
     float getBalance();

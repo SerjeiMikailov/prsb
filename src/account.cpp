@@ -40,7 +40,7 @@ void Account::show_balance(Account& ac) // outdated
 
 void Account::withdraw(float toWithdraw)
 {   
-    float tax = 0.05;  
+    float tax = withdrawTax();  
     float withdraw_tax = toWithdraw * tax;
     float withdraw_value = toWithdraw - withdraw_tax;
 
@@ -55,5 +55,5 @@ void Account::withdraw(float toWithdraw)
         balance -= withdraw_value;
         std::cout << "Wants to Withdraw: " << toWithdraw << std::endl;
         std::cout << "Withdraw Tax: " << withdraw_tax << std::endl;
-        std::cout << "Withdraw Total: " << withdraw_value << std::endl;
+        std::cout << "Withdraw: " << withdraw_value << std::endl;
 }
