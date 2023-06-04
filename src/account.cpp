@@ -29,6 +29,7 @@ void Account::withdraw(float toWithdraw)
             std::cout << "Insufficient balance" << std::endl;
         }
         balance -= withdraw_value;
+        std::cout << "Withdraw: " << toWithdraw << std::endl;
         std::cout << "Withdraw Tax: " << withdraw_tax << std::endl;
         std::cout << "Withdraw Total: " << withdraw_value << std::endl;
 }
