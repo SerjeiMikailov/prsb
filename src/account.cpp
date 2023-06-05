@@ -27,6 +27,17 @@ void Account::deposit(float toDeposit)
     std::cout << "Deposited: " << toDeposit << std::endl;
 }
 
+void Account::Transfer_deposit(float toDeposit)
+{
+    if(toDeposit < 0)
+        {
+            std::cout << "You can't deposit negative values" << std::endl;
+            return;
+        }
+
+    balance += toDeposit;
+}
+
 float Account::getBalance()
 {
     return balance;
@@ -56,4 +67,21 @@ void Account::withdraw(float toWithdraw)
         std::cout << "Wants to Withdraw: " << toWithdraw << std::endl;
         std::cout << "Withdraw Tax: " << withdraw_tax << std::endl;
         std::cout << "Withdraw: " << withdraw_value << std::endl;
+}
+
+void Account::Transfer_withdraw(float toWithdraw)
+{
+        float tax = withdrawTax();  
+    float withdraw_tax = toWithdraw * tax;
+    float withdraw_value = toWithdraw - withdraw_tax;
+
+    if(toWithdraw < 0)
+        {
+            std::cout << "You can't withdraw negative values" << std::endl;
+            return;
+        } else if(withdraw_value> balance)
+        {
+            std::cout << "Insufficient balance" << std::endl;
+        }
+        balance -= withdraw_value;
 }

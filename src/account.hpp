@@ -1,6 +1,7 @@
 #pragma once
 #include<string>
 #include "Owner.hpp"
+#include "person.hpp"
 
 
 class Account
@@ -15,7 +16,9 @@ public:
     virtual ~Account();
 
     virtual float withdrawTax() const = 0;
+    void Transfer_withdraw(float toWithdraw);
     void withdraw(float toWithdraw);
+    void Transfer_deposit(float toDeposit);
     void deposit(float toDeposit);
     
     float getBalance();
