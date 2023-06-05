@@ -9,9 +9,9 @@
 
 using namespace std;
 
-void Dwithdraw(Account& account)
+void Dwithdraw(Account& account, float value)
 {
-    account.withdraw(200);
+    account.withdraw(value);
 }
 
 int main()
@@ -23,8 +23,8 @@ int main()
 
     cout << "Person: " << person1.get_name() << endl;
 
-    cleitin.deposit(400);
-    Dwithdraw(cleitin);
+    cleitin.deposit(4000);
+    Dwithdraw(cleitin, 300);
     cout << "Money: " << cleitin.getBalance() << endl;
 
     cout << "/////////////////////////////////" << endl;
@@ -35,7 +35,9 @@ int main()
     cout << "Person: " << person2.get_name() << endl;
 
     pedrin.deposit(3000);
-    Dwithdraw(pedrin);
+    Dwithdraw(pedrin, 400);
+    cleitin.transfer(pedrin, 50);
+
     cout << "Money: " << pedrin.getBalance() << endl;
 
     cout << "/////////////////////////////////" << endl;
