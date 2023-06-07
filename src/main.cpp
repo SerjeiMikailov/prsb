@@ -3,9 +3,11 @@
 #include <string>
 /////////////////////
 #include "cpf.hpp"
+#include "Owner.hpp"
 #include "savingsAc.hpp"
-#include "account.hpp"
 #include "CurrentAc.hpp"
+#include "manager.hpp"
+#include "cashier.hpp"
 
 using namespace std;
 
@@ -18,7 +20,7 @@ int main()
 {
     cout << "/////////////////////////////////" << endl;
 
-    Person person1(CPF("123.456.789-10"), "Cleitin");
+    Owner person1(CPF("123.456.789-10"), "Cleitin", "umasenha");
     CurrentAc cleitin("34324", person1);
 
     cout << "Person: " << person1.get_name() << endl;
@@ -29,7 +31,7 @@ int main()
 
     cout << "/////////////////////////////////" << endl;
 
-    Person person2(CPF("123.456.789-10"), "Pedrin");
+    Owner person2(CPF("123.456.789-10"), "Pedrin", "outrasenha");
     savingsAc pedrin("3432454", person2);
 
     cout << "Person: " << person2.get_name() << endl;
@@ -39,6 +41,16 @@ int main()
     cleitin.transfer(pedrin, 50);
 
     cout << "Money: " << pedrin.getBalance() << endl;
+
+    cout << "/////////////////////////////////" << endl;
+
+    Cashier joseph(CPF("2323232394"), "Joseph", "josephsenha", 850);
+    cout << "Cashier: " << joseph.get_name() << endl;
+
+    cout << "/////////////////////////////////" << endl;
+
+    Manager osvaldo(CPF("2323232394"), "Osvaldo", "osvaldosenha", 850);
+    cout << "Manager: " << osvaldo.get_name() << endl;
 
     cout << "/////////////////////////////////" << endl;
 

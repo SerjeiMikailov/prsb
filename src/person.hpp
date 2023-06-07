@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "cpf.hpp"
+#include "auth.hpp"
 
 class Person
 {

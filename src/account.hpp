@@ -8,11 +8,11 @@ class Account
 {
 protected:
     std::string account_id;
-    Person person;
+    Owner owner;
     float balance;
 
 public:
-    Account(std::string account_id, Person person);
+    Account(std::string account_id, Owner owner);
     virtual ~Account();
 
     virtual float withdrawTax() const = 0;
