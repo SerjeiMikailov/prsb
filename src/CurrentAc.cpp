@@ -1,7 +1,7 @@
 #include <iostream>
 #include "CurrentAc.hpp"
 
-CurrentAc::CurrentAc(std::string number, Person person):Account(number, person)
+CurrentAc::CurrentAc(std::string number, Owner owner):Account(number, owner)
 {
 }
 

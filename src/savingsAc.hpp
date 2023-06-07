@@ -6,6 +6,6 @@
 class savingsAc final : public Account
 {
     public:
-        savingsAc(std::string number, Person person);
+        savingsAc(std::string number, Owner owner);
         float withdrawTax() const override;
 };

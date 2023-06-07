@@ -5,9 +5,9 @@
 
 // ac = account
 
-Account::Account(std::string account_id, Person person)
+Account::Account(std::string account_id, Owner owner)
     :account_id(account_id),
-     person(person),
+     owner(owner),
      balance(0)
 {
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include  "savingsAc.hpp"
 
-savingsAc::savingsAc(std::string number, Person person):Account(number, person)
+savingsAc::savingsAc(std::string number, Owner owner):Account(number, owner)
 {
 }
 
